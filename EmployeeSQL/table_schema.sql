@@ -12,12 +12,12 @@ create table titles (
 create table employees (
 	emp_no int primary key,
 	emp_title_id varchar(50) not null,
-	birth_date timestamp without time zone,
+	birth_date date,
 	first_name varchar(50) not null,
 	last_name varchar(50) not null,
-	sex varchar(10) not null,
-	hire_date timestamp without time zone,
-	foreign key (emp_title_id) references titles(title_id)
+	sex char not null,
+	hire_date date,
+	foreign key (emp_title_id) references titles(title_id) 
 );
 -- create salary table
 create table salary (
